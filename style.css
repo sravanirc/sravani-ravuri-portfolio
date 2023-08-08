@@ -3,7 +3,7 @@
     padding: none;
     box-sizing: border-box;
     font-family: 'Oxygen', sans-serif;
-
+    scroll-margin-top: 6rem ;
 }
 body{
     width: 100%;
@@ -73,7 +73,7 @@ main{
     width: 100%;
     font-size: 16px;
     margin:0 auto;
-    background-image: linear-gradient(to right, rgba(66, 145, 69,0.8),#f5f5f5,#f5f5f5,rgba(66, 145, 69,0.8) ); 
+    background-image: linear-gradient(to right, rgba(66, 145, 69, 0.8),#f5f5f5,#f5f5f5,rgba(66, 145, 69,0.8) ); 
     
    }
 
@@ -112,14 +112,14 @@ text-shadow:15px 15px 5px #424242;
 
 }
 
-.about div p, h3{
+.about div p, h2{
 font-size: 1.25rem;
 text-align: justify;
 line-height: 1.5rem;
 
 }
 
-h3{
+h2{
     text-align: center ;
    }
 
@@ -142,11 +142,9 @@ h3{
 }
 
 .project{
-    /* border: 1px solid black; */
-    width: 40%;
+width: 40%;
 padding: 2rem;
 text-align: center;
-
 }
 
 .project img{
@@ -162,7 +160,7 @@ text-align: center;
     font-size: 1.1rem;
     
 }
-.projtitle{
+.projtitle, .project p{
     color:#424242;
     font-size: 1.3rem;
     margin:1rem;
@@ -186,6 +184,7 @@ text-align: center;
    
 }
 .contactMe{
+    scroll-margin-top: 6rem ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,6 +200,16 @@ text-align: center;
     border-radius: 0.25rem;
     font-size: 1rem;
     border: #424242 solid 1px;
+}
+button, #submit{
+    background-color:  rgba(66, 145, 69, 0.8);
+    /* height: 2rem; */
+    border-radius: 0.5rem;
+    color:#f5f5f5;
+    border : #f5f5f5 2px solid;
+    box-shadow: 5px 5px 5px gray;
+    font-size: 1.5rem;
+    padding: 1rem;
 }
 
 footer nav ul li{
@@ -235,8 +244,25 @@ footer{
 @media screen and (max-width : 850px){
     *{
         font-size: 0.9rem;
+        scroll-margin-top:8rem ;
     }
-    #quote{
+    header, footer{
+    /* font-size: 1rem; */
+        flex-direction: column;
+    }
+   
+  
+    footer nav ul li ,header nav ul li{
+        padding: 0.5rem;
+        margin: 0;
+       }
+
+       main{
+        position: relative;
+        top: 8rem;
+        background-image: linear-gradient(to right, rgba(66, 145, 69, 0.8),#f5f5f5,#f5f5f5,#f5f5f5,#f5f5f5,rgba(66, 145, 69,0.8) ); 
+       }
+    #quote {
 display: none;
     }
     .quote{
@@ -247,16 +273,27 @@ display: none;
     }
     .projects{
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: center;
         align-items: center;
     }
     .project {
         display: flex;
         width: 100%;
+        flex-direction: column;
     }
     .project img{
         margin: 0 auto;
         max-width: 100%;
         height: auto;
-            }
-}
+         }
+  .contactMe{
+    width: 90%;
+ } 
+
+ footer{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+} 
